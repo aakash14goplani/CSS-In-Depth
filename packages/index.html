@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Packages</title>
-		<link rel="shortcut icon" href="../favicon.png" />
+		<link rel="shortcut icon" href="../assets/favicon.png" />
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
 		<link rel="stylesheet" href="../shared.css" />
 		<link rel="stylesheet" href="packages.css" />
@@ -13,7 +13,9 @@
 	<body>
 		<header class="main-header">
 			<div>
-				<a href="../index.html" class="main-header__brand"> uHost </a>
+				<a href="../index.html" class="main-header__brand">
+					<img src="../assets/uhost-icon.png" alt="logo" />
+				</a>
 			</div>
 			<nav class="main-nav">
 				<ul class="main-nav__items">
@@ -30,9 +32,11 @@
 			</nav>
 		</header>
 		<main>
+			<div class="background"></div>
 			<section class="package" id="plus">
 				<a href="#" class="package__select-link">
 					<h1 class="package__title">Our PLUS Plan</h1>
+					<h2 class="package__badge">RECOMMENDED</h2>
 					<h2 class="package__subtitle">The most popular choice of our customers.</h2>
 					<p class="package__description">Benefit from increased storage and faster support to ensure that your mission-critical data and applications are always available!</p>
 				</a>
@@ -44,7 +48,7 @@
 					<p class="package__description">Get started immediately at zero cost!</p>
 				</a>
 			</section>
-      <div class="clearfix"></div>
+			<div class="clearfix"></div>
 			<section class="package" id="premium">
 				<a href="#" class="package__select-link">
 					<h1 class="package__title">Our PREMIUM Plan</h1>
