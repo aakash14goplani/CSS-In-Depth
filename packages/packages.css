@@ -17,16 +17,21 @@ main {
 	border-left: none;
 	margin: 1rem 0;
 	position: relative;
+	max-width: 45rem;
 }
 
 .package__badge {
 	position: absolute;
-	top: 2.5rem;
-	right: 2rem;
+	top: 4.5rem;
+	left: 2rem;
 	background: #ff5454;
 	color: white;
 	padding: 0.5rem;
 	font-size: 0.75rem;
+}
+
+.package__badge--margin-bottom {
+	margin-bottom: 3rem;
 }
 
 #plus {
@@ -89,4 +94,21 @@ main {
 
 #premium .package__subtitle {
 	color: #bbb;
+}
+
+@media (min-width: 45rem) {
+	.package__badge {
+		position: absolute;
+		top: 2.5rem;
+		left: unset;
+		right: 2rem;
+		background: #ff5454;
+		color: white;
+		padding: 0.5rem;
+		font-size: 0.75rem;
+	}
+
+	.package__badge--margin-bottom {
+		display: none;
+	}
 }
