@@ -67,8 +67,8 @@
 }
 
 .signup-form :invalid {
-	border-color: red;
-	background: #faacac;
+	border-color: red !important;
+	background: #faacac !important;
 }
 
 .signup-form button[type='submit'] {
