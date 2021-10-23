@@ -1,10 +1,9 @@
-# Intermediate CSS
+# Advance CSS
 
 - This topics covers complex topics like:
-   1. Positioning Elements
-   2. Handling backrgound elements and images
-   3. Sizes and Units
-   4. Working with JavaScript and CSS
-   5. Responsive Web Design
-   6. Adding and Styling Forms
-   7. Working with custom text and fonts
+   1. Flexbox
+   2. Grid
+   3. Transformations
+   4. Animations
+   5. Best Practices
+   6. SASS
