@@ -7,6 +7,13 @@
 	color: #ff5454;
 }
 
+.signup-form {
+	display: grid;
+	grid-auto-rows: 2rem;
+	grid-row-gap: 0.5rem;
+	align-items: center;
+}
+
 .signup-form label {
 	font-weight: bold;
 }
@@ -15,7 +22,6 @@
 .signup-form input,
 .signup-form select {
 	display: block;
-	margin-top: 1rem;
 	width: 100%;
 }
 
@@ -73,7 +79,7 @@
 
 .signup-form button[type='submit'] {
 	display: block;
-	margin: 1rem auto;
+	margin: auto;
 	width: 40%;
 	min-width: 10rem;
 }
@@ -82,5 +88,16 @@
 	.signup-form {
 		margin: auto;
 		width: 50%;
+		grid-template-columns: 10rem auto;
+		grid-gap: 2rem 1rem;
+	}
+
+	.signup-title {
+		margin-bottom: 3rem;
+	}
+
+	.signup-form__checkbox,
+	.signup-form button[type='submit'] {
+		grid-column: span 2;
 	}
 }

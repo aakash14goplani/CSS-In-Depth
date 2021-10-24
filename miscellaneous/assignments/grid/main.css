@@ -1,5 +1,16 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+
 .container {
-	margin: 20px;
+	margin: 2rem;
+	font-size: 1.4rem;
+	display: grid;
+	/* grid-template-columns: 20rem 2fr 10% 1fr; */
+	grid-template-columns: repeat(4, [col-start] 25% [col-end]);
+	grid-template-rows: [row-1-start] 15rem [row-1-end row-2-start] minmax(5rem, 15rem) [row-2-end row-3-start] 10rem [row-3-end];
 }
 
 .el1 {
@@ -8,12 +19,92 @@
 
 .el2 {
 	background: rgba(255, 0, 0, 0.5);
+	grid-column-start: 1;
+	grid-row-start: row-2-start;
+	grid-column-end: -1;
+	z-index: 2;
+	grid-row-end: span 1;
 }
 
 .el3 {
 	background: rgba(0, 128, 0, 0.5);
+	grid-column-start: 2;
+	grid-column-end: span 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
 }
 
 .el4 {
 	background: rgba(0, 4, 255, 0.5);
+}
+
+.assignment {
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(6, 1fr);
+	grid-gap: 1rem;
+	margin: 2rem;
+	grid-template-areas: 'head head head head head' 'side side main main main' 'side side main main main' 'side side main main main' 'side side main main main' 'footer footer footer footer footer';
+}
+
+.assignment div {
+	border: 1px solid white;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-align: center;
+	padding: 1rem;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.assignment .header {
+	/* grid-column-start: 1;
+	grid-column-end: span 5; */
+	width: 92%;
+	grid-area: head;
+}
+
+.assignment .sidebar {
+	/* grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 6; */
+	grid-area: side;
+	width: 93%;
+}
+
+.assignment .main-content {
+	/* grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 6; */
+	width: 86.6%;
+	grid-area: main;
+}
+
+.assignment .footer {
+	/* grid-column-start: 1;
+	grid-column-end: 6;
+	grid-row-start: 6;
+	grid-row-end: 7; */
+	grid-area: footer;
+	width: 92%;
+}
+
+@media (max-width: 55rem) {
+	.assignment {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(7, 1fr);
+		grid-gap: 1rem;
+		margin: 2rem;
+		grid-template-areas: 'head' 'side' 'side' 'main' 'main' 'footer';
+	}
+
+	.assignment .header,
+	.assignment .sidebar,
+	.assignment .main-content,
+	.assignment .footer {
+		width: auto;
+	}
 }
