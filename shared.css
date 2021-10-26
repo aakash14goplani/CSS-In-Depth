@@ -20,6 +20,8 @@ body {
 	top: 0;
 	left: 0;
 	display: none;
+	opacity: 0;
+	transition: opacity 0.2s linear;
 }
 
 .main-header {
@@ -72,6 +74,10 @@ body {
 .main-nav__item a:active {
 	color: white;
 	border-bottom: 0.3rem solid white;
+}
+
+.main-nav__item--cta {
+	animation: wiggle 0.5s 2s 16 ease-out none;
 }
 
 .main-nav__item--cta a,
@@ -143,7 +149,7 @@ body {
 }
 
 .mobile-nav {
-	display: none;
+	transform: translateX(-100%);
 	position: fixed;
 	z-index: 101;
 	top: 0;
@@ -151,6 +157,7 @@ body {
 	background: white;
 	width: 80%;
 	height: 100vh;
+	transition: translate 0.3s ease-out;
 }
 
 .mobile-nav__items {
@@ -203,6 +210,10 @@ body {
 
 .open {
 	display: flex !important;
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+	flex-direction: column;
+	justify-content: center;
 }
 
 @media (min-width: 45rem) {
@@ -223,5 +234,17 @@ body {
 	.main-footer__link {
 		margin: 0 1rem;
 		display: flex;
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	50% {
+		transform: rotateZ(-6deg);
+	}
+	100% {
+		transform: rotateZ(6deg);
 	}
 }

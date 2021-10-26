@@ -13,7 +13,10 @@ for (let i = 0; i < selectPlanButtons.length; i++) {
 }
 
 function addOpenClass() {
-	backdrop.classList.add('open');
+	backdrop.style.display = 'block';
+	setTimeout(() => {
+		backdrop.classList.add('open');
+	}, 200);
 	if (modal) {
 		modal.classList.add('open');
 	}
@@ -21,6 +24,9 @@ function addOpenClass() {
 
 function removeOpenClass() {
 	backdrop.classList.remove('open');
+	setTimeout(() => {
+		backdrop.style.display = 'none';
+	}, 200); // <- should match time in transition
 	if (modal) {
 		modal.classList.remove('open');
 	}
@@ -39,5 +45,8 @@ backdrop.addEventListener('click', () => {
 
 toggleNavigationButton.addEventListener('click', () => {
 	mobileNavigation.classList.add('open');
-	backdrop.classList.add('open');
+	backdrop.style.display = 'block';
+	setTimeout(() => {
+		backdrop.classList.add('open');
+	}, 200);
 });

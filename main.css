@@ -1,14 +1,18 @@
 .modal {
 	position: fixed;
-	display: none;
+	opacity: 0;
+	transform: translateY(-30rem);
+	transition: opacity 1s ease-out, translate 1s ease-in;
 	z-index: 200;
 	top: 20%;
-	left: 30%;
-	width: 40%;
+	left: 21%;
+	width: 57%;
 	background: white;
+	min-height: 20rem;
 	padding: 1rem;
 	border: 1px solid #ccc;
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	word-break: break-all;
 }
 
 .modal__title {
@@ -18,6 +22,8 @@
 
 .modal__actions {
 	text-align: center;
+	bottom: -2rem;
+	position: relative;
 }
 
 .modal__action {
