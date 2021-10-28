@@ -1,0 +1,134 @@
+@import url('../variables.css');
+
+main {
+	padding-top: 2rem;
+}
+
+.background {
+	background: url('../assets/plans-background.jpg') center / cover no-repeat border-box, var(--red-color, #ff1b68);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;
+	filter: grayscale(40%);
+}
+
+.package {
+	width: 80%;
+	border: 0.25rem solid #0e4f1f;
+	border-left: none;
+	margin: 1rem 0;
+	position: relative;
+	max-width: 45rem;
+	overflow: hidden;
+}
+
+.package__badge {
+	position: absolute;
+	top: 2.5rem;
+	right: 2rem;
+	width: 12rem;
+	background: var(--red-color, #ff1b68);
+	color: white;
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	text-align: center;
+	transform-origin: center;
+	transform: rotateZ(45deg) translateX(2.8rem) translateY(-4rem);
+}
+
+.package__badge--margin-bottom {
+	margin-bottom: 3rem;
+}
+
+#plus {
+	background: rgba(213, 255, 220, 0.95);
+	margin-top: 3.125rem;
+}
+
+#free {
+	background: rgba(234, 252, 237, 0.95);
+	float: right;
+	border-right: none;
+	border-left: 0.25rem solid #0e4f1f;
+	text-align: right;
+}
+
+#free:hover,
+#free:active {
+	border-left-color: #ff5454;
+}
+
+#premium {
+	background: rgba(14, 79, 31, 0.95);
+}
+
+.clearfix {
+	clear: both;
+}
+
+.package__select-link {
+	text-decoration: none;
+	display: block;
+	padding: 2rem;
+}
+
+.package:hover,
+.package:active {
+	border-color: var(--red-color, #ff1b68);
+	box-shadow: 2px 2px 0.25rem rgb(0 0 0 / 50%);
+	animation: push-up 1s ease-out forwards;
+}
+
+.package__title {
+	color: black;
+}
+
+.package__subtitle {
+	color: #979797;
+}
+
+.package__description {
+	border: 1px solid var(--dark-green, #0e4f1f);
+	padding: 1rem;
+	background: white;
+	color: var(--dark-green, #0e4f1f);
+	font-weight: 500;
+}
+
+#premium .package__title {
+	color: white;
+}
+
+#premium .package__subtitle {
+	color: #bbb;
+}
+
+@media (min-width: 45rem) {
+	.package__badge {
+		position: absolute;
+		top: 2.5rem;
+		left: unset;
+		right: 2rem;
+		background: #ff5454;
+		color: white;
+		padding: 0.5rem;
+		font-size: 0.75rem;
+	}
+
+	.package__badge--margin-bottom {
+		display: none;
+	}
+}
+
+@keyframes push-up {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-1.5rem);
+	}
+	100% {
+		transform: translateY(-1.2rem);
+	}
+}

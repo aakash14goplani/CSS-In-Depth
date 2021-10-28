@@ -1,0 +1,8 @@
+// $main-color: #521751;
+$colors: (
+	main: #521751,
+	secondary: #fa923f,
+	tertiary: #fae5ff,
+);
+$border-defaults: 0.05rem solid map-get($colors, main);
+$box-size: border-box;
