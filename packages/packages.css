@@ -1,9 +1,11 @@
+@import url('../variables.css');
+
 main {
 	padding-top: 2rem;
 }
 
 .background {
-	background: url('../assets/plans-background.jpg') center / cover no-repeat border-box, #ff1b68;
+	background: url('../assets/plans-background.jpg') center / cover no-repeat border-box, var(--red-color, #ff1b68);
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -26,7 +28,7 @@ main {
 	top: 2.5rem;
 	right: 2rem;
 	width: 12rem;
-	background: #ff5454;
+	background: var(--red-color, #ff1b68);
 	color: white;
 	padding: 0.5rem;
 	font-size: 0.75rem;
@@ -73,7 +75,7 @@ main {
 
 .package:hover,
 .package:active {
-	border-color: #ff5454;
+	border-color: var(--red-color, #ff1b68);
 	box-shadow: 2px 2px 0.25rem rgb(0 0 0 / 50%);
 	animation: push-up 1s ease-out forwards;
 }
@@ -87,10 +89,10 @@ main {
 }
 
 .package__description {
-	border: 1px solid #0e4f1f;
+	border: 1px solid var(--dark-green, #0e4f1f);
 	padding: 1rem;
 	background: white;
-	color: #0e4f1f;
+	color: var(--dark-green, #0e4f1f);
 	font-weight: 500;
 }
 

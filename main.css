@@ -10,7 +10,7 @@
 	background: white;
 	min-height: 20rem;
 	padding: 1rem;
-	border: 1px solid #ccc;
+	border: 1px solid var(--light-gray, #ccc);
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	word-break: break-all;
 }
@@ -27,8 +27,8 @@
 }
 
 .modal__action {
-	border: 1px solid #0e4f1f;
-	background: #0e4f1f;
+	border: 1px solid var(--dark-green, var(--dark-green, #0e4f1f));
+	background: var(--dark-green, var(--dark-green, #0e4f1f));
 	text-decoration: none;
 	color: white;
 	font: inherit;
@@ -49,8 +49,8 @@
 
 .modal__action--negative:hover,
 .modal__action--negative:active {
-	background: #ff5454;
-	border-color: #ff5454;
+	background: var(--red-color, #ff1b68);
+	border-color: var(--red-color, #ff1b68);
 }
 
 #product-overview {
@@ -134,7 +134,7 @@
 }
 
 .plan__title {
-	color: #0e4f1f;
+	color: var(--dark-green, #0e4f1f);
 	margin: 0.5rem 0;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .plan--highlighted .plan__price {
-	color: #0e4f1f;
+	color: var(--dark-green, #0e4f1f);
 }
 
 #key-features {
