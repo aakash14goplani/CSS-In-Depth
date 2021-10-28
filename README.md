@@ -50,4 +50,4 @@ Naming conventions followed in this tutorial is BEM model.
 
 ---
 
-**End Project URL:**
+**End Project URL:** https://aakash14goplani.github.io/CSS-In-Depth/
