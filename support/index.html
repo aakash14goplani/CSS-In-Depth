@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Support</title>
+		<link rel="shortcut icon" href="../assets/favicon.png" />
+		<link rel="stylesheet" href="../shared.css" />
+		<link rel="stylesheet" href="support.css" />
+	</head>
+
+	<body>
+		<div class="backdrop"></div>
+		<header class="main-header">
+			<div>
+				<button class="toggle-button">
+					<span class="toggle-button__bar"></span>
+					<span class="toggle-button__bar"></span>
+					<span class="toggle-button__bar"></span>
+				</button>
+				<a href="../index.html" class="main-header__brand">
+					<img src="../assets/uhost-icon.png" alt="logo" />
+				</a>
+			</div>
+			<nav class="main-nav">
+				<ul class="main-nav__items">
+					<li class="main-nav__item">
+						<a href="../packages/index.html">Packages</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="../customers/index.html">Customers</a>
+					</li>
+					<li class="main-nav__item main-nav__item--cta">
+						<a href="../start-hosting/index.html">Start Hosting</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<nav class="mobile-nav">
+			<ul class="mobile-nav__items">
+				<li class="mobile-nav__item">
+					<a href="../packages/index.html">Packages</a>
+				</li>
+				<li class="mobile-nav__item">
+					<a href="../customers/index.html">Customers</a>
+				</li>
+				<li class="mobile-nav__item mobile-nav__item--cta">
+					<a href="../start-hosting/index.html">Start Hosting</a>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<div class="slideshow-container">
+				<div class="slideshow-container__slides fade">
+					<div class="slideshow-container__slides--number">1 / 3</div>
+					<img src="../assets/img_nature_wide.jpg" class="slideshow-container__slides--img" />
+					<div class="slideshow-container__slides--text">Caption Text</div>
+				</div>
+
+				<div class="slideshow-container__slides fade">
+					<div class="slideshow-container__slides--number">2 / 3</div>
+					<img src="../assets/img_snow_wide.jpg" class="slideshow-container__slides--img" />
+					<div class="slideshow-container__slides--text">Caption Two</div>
+				</div>
+
+				<div class="slideshow-container__slides fade">
+					<div class="slideshow-container__slides--number">3 / 3</div>
+					<img src="../assets/img_mountains_wide.jpg" class="slideshow-container__slides--img" />
+					<div class="slideshow-container__slides--text">Caption Three</div>
+				</div>
+
+				<a class="slideshow-container__prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="slideshow-container__next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+
+			<div class="slideshow-navigation-dots">
+				<span class="slideshow-navigation-dots__dot" onclick="currentSlide(1)"></span>
+				<span class="slideshow-navigation-dots__dot" onclick="currentSlide(2)"></span>
+				<span class="slideshow-navigation-dots__dot" onclick="currentSlide(3)"></span>
+			</div>
+
+			<div class="contact-us-section">
+				<div class="helper-text">
+					<h2>What can we help you with?</h2>
+				</div>
+				<div class="accordion-container">
+					<button class="accordion-container__accordion">
+						<div class="accordion-container__accordion--icon">
+							<img src="../assets/talk-to-us.svg" />
+						</div>
+						<div class="accordion-container__accordion--text">
+							<span class="header">Talk to us</span>
+							<span class="description">Get on a call with our support team. Available between Mon to Fri 9:00 to 18:00 PST</span>
+						</div>
+					</button>
+					<div class="accordion-container__panel">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+
+					<button class="accordion-container__accordion">
+						<div class="accordion-container__accordion--icon">
+							<img src="../assets/chat-with-support.svg" />
+						</div>
+						<div class="accordion-container__accordion--text">
+							<span class="header">Chat with Support</span>
+							<span class="description">Start a conversation with our friendly and expert support team. Available between 5:00 to 18:00 PST</span>
+						</div>
+					</button>
+					<div class="accordion-container__panel">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+
+					<button class="accordion-container__accordion">
+						<div class="accordion-container__accordion--icon">
+							<img src="../assets/faq-help.svg" />
+						</div>
+						<div class="accordion-container__accordion--text">
+							<span class="header">FAQ and Help Center</span>
+							<span class="description">FAQs and our searchable knowledge base for instant answers to your questions.</span>
+						</div>
+					</button>
+					<div class="accordion-container__panel">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+			</div>
+
+			<script src="carousel.js"></script>
+			<script src="accordion.js"></script>
+		</main>
+		<footer class="main-footer">
+			<nav>
+				<ul class="main-footer__links">
+					<li class="main-footer__link">
+						<a href="index.html">Support</a>
+					</li>
+					<li class="main-footer__link">
+						<a href="#">Terms of Use</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+		<script src="../shared.js"></script>
+	</body>
+</html>
