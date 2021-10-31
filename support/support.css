@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@import '../variables.css';
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main {
+  padding: 6rem 0;
+}
+main .slideshow-container {
+  position: relative;
+  min-height: 15rem;
+  background: var(--red-color);
+  z-index: 0;
+}
+main .slideshow-container__slides {
+  max-width: 65rem;
+  display: none;
+  margin: 0 auto;
+}
+main .slideshow-container__slides--number {
+  position: absolute;
+  color: #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+main .slideshow-container__slides--img {
+  background: var(--red-color);
+  width: 100%;
+  min-height: 15rem;
+  vertical-align: middle;
+  filter: grayscale(40%);
+  z-index: 0;
+}
+main .slideshow-container__slides--text {
+  position: absolute;
+  color: #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  max-width: inherit;
+}
+main .slideshow-container.fade {
+  animation: fade 2s ease-out;
+}
+main .slideshow-container__prev, main .slideshow-container__next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -1.4rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: 0.5s ease-out;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+main .slideshow-container__next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+main .slideshow-container__prev:hover, main .slideshow-container__next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+main .slideshow-container.default-bg {
+  background: inherit;
+}
+main .slideshow-navigation-dots {
+  text-align: center;
+  margin: 2rem 0;
+}
+main .slideshow-navigation-dots__dot {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  margin: 0 0.2rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease-out;
+}
+main .slideshow-navigation-dots > .active, main .slideshow-navigation-dots__dot:hover {
+  background-color: #717171;
+}
+main .contact-us-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+main .contact-us-section .helper-text {
+  text-align: center;
+}
+main .contact-us-section .accordion-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+main .contact-us-section .accordion-container__accordion {
+  display: flex;
+  justify-content: flex-start;
+  background: white;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+}
+main .contact-us-section .accordion-container__accordion--icon {
+  width: 6rem;
+  margin-right: 1rem;
+}
+main .contact-us-section .accordion-container__accordion--icon img {
+  width: 100%;
+}
+main .contact-us-section .accordion-container__accordion--text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 1rem;
+  width: 100%;
+}
+main .contact-us-section .accordion-container__accordion--text .header {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+main .contact-us-section .accordion-container__accordion--text .description {
+  font-size: 0.8rem;
+}
+main .contact-us-section .accordion-container__accordion:hover {
+  background-color: #ccc;
+}
+main .contact-us-section .accordion-container__accordion:after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+main .contact-us-section .accordion-container .active {
+  background-color: #ccc;
+}
+main .contact-us-section .accordion-container .active:after {
+  content: "−";
+}
+main .contact-us-section .accordion-container__panel {
+  padding: 0 1rem;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+main .contact-us-section .accordion-container__panel p {
+  margin-top: 0;
+}
+
+@media (min-width: 25rem) {
+  main .contact-us-section .accordion-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  main .contact-us-section .accordion-container__accordion--icon {
+    width: 3rem;
+  }
+  main .contact-us-section .accordion-container__accordion--text {
+    padding: 0;
+  }
+}
+@media (min-width: 65rem) {
+  main .slideshow-container__slides--number {
+    left: 8%;
+  }
+  main .slideshow-container__prev {
+    left: 8% !important;
+  }
+  main .slideshow-container__next {
+    right: 8% !important;
+  }
+  main .contact-us-section .accordion-container {
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=support.css.map */
